@@ -50,4 +50,17 @@ class SongDetail(APIView):
         }
         song.delete()
         return Response(custom_response, status=status.HTTP_200_OK)
+
+    def patch(self, request, pk):
+        song = self.get_object(pk)
+        serializer = SongSerializer(song, data=request.data, partial=True)
+        song.likes += 1
+        custom_response = {
+            "Song Name": song.title,
+            "Song Likes": song.likes
+        }
+        if serializer.is_valid():
+            song.save()
+            return Response(custom_response, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
