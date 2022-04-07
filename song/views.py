@@ -8,7 +8,9 @@ from rest_framework import status
 class SongList(APIView):
 
     def get(self, request):
-        pass
+        songs = Song.objects.all()
+        serializer = SongSerializer(songs, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
     def post(self, request):
@@ -16,3 +18,4 @@ class SongList(APIView):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
