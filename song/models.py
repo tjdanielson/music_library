@@ -8,3 +8,4 @@ class Song(models.Model):
     release_date = models.DateField(null=True, blank=False)
     genre = models.CharField(max_length=100)
     likes = models.IntegerField(default=0)
+    youtube_id = models.CharField(max_length=500, default="")
