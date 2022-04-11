@@ -68,11 +68,11 @@ class FilterSongs(APIView):
     
     def get(self, request, search_term):
         search_term = str(search_term)
-        titles = Song.objects.filter(title__contains=search_term)
-        albums = Song.objects.filter(album__contains=search_term)
-        artists = Song.objects.filter(artist__contains=search_term)
-        dates = Song.objects.filter(release_date__contains=search_term)
-        genres = Song.objects.filter(genre__contains=search_term)
+        titles = Song.objects.filter(title__icontains=search_term)
+        albums = Song.objects.filter(album__icontains=search_term)
+        artists = Song.objects.filter(artist__icontains=search_term)
+        dates = Song.objects.filter(release_date__icontains=search_term)
+        genres = Song.objects.filter(genre__icontains=search_term)
         songs = titles.union(albums, artists, dates, genres)
         serializer = SongSerializer(songs, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
