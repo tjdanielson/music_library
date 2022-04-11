@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Wannabe\",\r\n    \"artist\": \"Leyya\",\r\n    \"album\": \"Wannabe\",\r\n    \"release_date\": \"2018-07-19\",\r\n    \"genre\": \"Alternative/Indie\"\r\n}",
+					"raw": "{\r\n    \"title\": \"asdfds\",\r\n    \"artist\": \"Leyya\",\r\n    \"album\": \"Wannabe\",\r\n    \"release_date\": \"2018-07-19\",\r\n    \"genre\": \"Alternative/Indie\",\r\n    \"youtube_id\": \"TnlPtaPxXfc\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -94,7 +94,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Blahdabebloop\",\r\n    \"artist\": \"drake\",\r\n    \"album\": \"Sound & Color\",\r\n    \"release_date\": \"2015-04-17\",\r\n    \"genre\": \"Blues Rock\"\r\n}",
+					"raw": "{\r\n    \"title\": \"That's Life\",\r\n    \"artist\": \"Frank Sinatra\",\r\n    \"album\": \"That's Life\",\r\n    \"release_date\": \"1960-11-18\",\r\n    \"genre\": \"Jazz\",\r\n    \"youtube_id\": \"TnlPtaPxXfc\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -102,7 +102,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/music/14/",
+					"raw": "http://127.0.0.1:8000/api/music/1/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -114,7 +114,7 @@
 					"path": [
 						"api",
 						"music",
-						"14",
+						"1",
 						""
 					]
 				}
@@ -136,7 +136,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/music/9/",
+					"raw": "http://127.0.0.1:8000/api/music/49/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -148,7 +148,7 @@
 					"path": [
 						"api",
 						"music",
-						"9",
+						"49",
 						""
 					]
 				}
